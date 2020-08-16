@@ -1,0 +1,40 @@
+service: sls-strapi
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: vendu-serverless-admin
+  logRetentionInDays: ${self:custom.vars.logRetentionInDays, 1}
+
+  environment:
+    ADMIN_JWT_SECRET: "Just using dummy"
+
+package:
+  exclude:
+    - ./**
+  include:
+    - node_modules/**
+    - api/**
+    - config/**
+    - extensions/**
+    - plugins/**
+    - package.json
+    - app.js
+
+functions:
+  api:
+    handler: app.handler
+    memorySize: 1024
+    timeout: 24
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{any+}
+          method: ANY
+          cors: true
+
+plugins:
+  - serverless-offline

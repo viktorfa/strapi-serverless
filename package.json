@@ -9,12 +9,15 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "serverless-offline": "^6.5.0"
+  },
   "dependencies": {
     "knex": "<0.20.0",
     "sqlite3": "latest",
     "strapi": "3.1.4",
     "strapi-admin": "3.1.4",
+    "serverless-http": "^2.5.0",
     "strapi-connector-bookshelf": "3.1.4",
     "strapi-plugin-content-manager": "3.1.4",
     "strapi-plugin-content-type-builder": "3.1.4",
