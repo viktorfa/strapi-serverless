@@ -1,3 +1,3 @@
-# Strapi application
+# Strapi Serverless Tutorial
 
-A quick description of your strapi application
+[https://blog.vikfand.com/posts/serverless-strapi-tutorial/](https://blog.vikfand.com/posts/serverless-strapi-tutorial/)
