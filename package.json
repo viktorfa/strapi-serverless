@@ -6,24 +6,28 @@
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
+    "build": "strapi build && ./scripts/post-build.sh",
     "strapi": "strapi"
   },
   "devDependencies": {
+    "serverless-apigw-binary": "^0.4.4",
+    "serverless-cloudformation-sub-variables": "^0.2.1",
     "serverless-offline": "^6.5.0"
   },
   "dependencies": {
     "knex": "<0.20.0",
+    "serverless-http": "^2.5.0",
     "sqlite3": "latest",
     "strapi": "3.1.4",
     "strapi-admin": "3.1.4",
-    "serverless-http": "^2.5.0",
     "strapi-connector-bookshelf": "3.1.4",
+    "strapi-connector-mongoose": "^3.1.4",
     "strapi-plugin-content-manager": "3.1.4",
     "strapi-plugin-content-type-builder": "3.1.4",
     "strapi-plugin-email": "3.1.4",
     "strapi-plugin-upload": "3.1.4",
     "strapi-plugin-users-permissions": "3.1.4",
+    "strapi-provider-upload-aws-s3": "^3.1.4",
     "strapi-utils": "3.1.4"
   },
   "author": {
