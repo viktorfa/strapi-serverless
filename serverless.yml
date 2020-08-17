@@ -1,4 +1,4 @@
-service: sls-strapi-tut
+service: sls-strapi
 
 provider:
   name: aws
@@ -10,7 +10,7 @@ provider:
     ADMIN_JWT_SECRET: "Just using dummy"
     BUCKET_NAME: !Ref S3StaticBucket
     # URL from a free Mongo Atlas cluster.
-    MONGODB_URI: "mongodb+srv://strapiowner:PASSWORD@cluster0.weldo.mongodb.net/strapiTut?retryWrites=true&w=majority"
+    MONGODB_URI: "mongodb+srv://strapiowner:PASSWORD@cluster0.weldo.mongodb.net/strapi?retryWrites=true&w=majority"
   
   iamRoleStatements:
     - Effect: Allow
@@ -67,5 +67,3 @@ plugins:
   - serverless-offline
   - serverless-cloudformation-sub-variables
   - serverless-apigw-binary
-
-# ...
